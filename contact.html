@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ - 関数アートしりとり</title>
+  <meta name="description" content="関数アートしりとりプロジェクトへのお問い合わせ">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Feather Iconsの読み込み -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">関数アートしりとり</a>
+        
+        <!-- デスクトップナビゲーション -->
+        <nav class="desktop-nav">
+          <a href="index.html" class="nav-link">トップ</a>
+          <a href="archive.html" class="nav-link">アーカイブ</a>
+          <a href="how-to-join.html" class="nav-link">参加方法</a>
+          <a href="contact.html" class="nav-link active">お問い合わせ</a>
+        </nav>
+
+        <!-- モバイルメニューボタン -->
+        <button class="mobile-menu-button" aria-label="メニューを開く">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- モバイルナビゲーション -->
+      <div class="mobile-nav">
+        <div class="container">
+          <nav class="mobile-nav-links">
+            <a href="index.html" class="nav-link">トップ</a>
+            <a href="archive.html" class="nav-link">アーカイブ</a>
+            <a href="how-to-join.html" class="nav-link">参加方法</a>
+            <a href="contact.html" class="nav-link">お問い合わせ</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <section class="section">
+        <div class="container narrow">
+          <h1 class="page-title">お問い合わせ</h1>
+          
+          <div class="contact-grid">
+            <!-- お問い合わせフォーム -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card mb-6">
+                  <div class="card-content">
+                    <h2 class="section-title">連絡先情報</h2>
+                    <p class="text-muted mb-6">
+                      以下の方法でお問い合わせいただけます。
+                    </p>
+                    <div class="contact-info-item">
+                      <i data-feather="mail" class="contact-info-icon"></i>
+                      <div class="contact-info-content">
+                        <h3>メール</h3>
+                        <p>mathgraphart.server.jp@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="contact-info-item">
+                      <i data-feather="twitter" class="contact-info-icon"></i>
+                      <div class="contact-info-content">
+                        <h3>X (旧Twitter) DM</h3>
+                        <a href="https://twitter.com/TETH_Main" target="_blank" rel="noopener noreferrer">
+                          @TETH_Main
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p class="copyright">
+          &copy; <span id="currentYear"></span> 関数アートしりとりプロジェクト. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+          <a href="credits.html" class="footer-link">クレジット</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

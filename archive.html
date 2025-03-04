@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アーカイブ - 関数アートしりとり</title>
+  <meta name="description" content="関数アートしりとりプロジェクトの作品アーカイブ">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Feather Iconsの読み込み -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">関数アートしりとり</a>
+        
+        <!-- デスクトップナビゲーション -->
+        <nav class="desktop-nav">
+          <a href="index.html" class="nav-link">トップ</a>
+          <a href="archive.html" class="nav-link active">アーカイブ</a>
+          <a href="how-to-join.html" class="nav-link">参加方法</a>
+          <a href="contact.html" class="nav-link">お問い合わせ</a>
+        </nav>
+
+        <!-- モバイルメニューボタン -->
+        <button class="mobile-menu-button" aria-label="メニューを開く">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- モバイルナビゲーション -->
+      <div class="mobile-nav">
+        <div class="container">
+          <nav class="mobile-nav-links">
+            <a href="index.html" class="nav-link">トップ</a>
+            <a href="archive.html" class="nav-link">アーカイブ</a>
+            <a href="how-to-join.html" class="nav-link">参加方法</a>
+            <a href="contact.html" class="nav-link">お問い合わせ</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="page-title">アーカイブ</h1>
+          
+          <!-- 検索とフィルター -->
+          <div class="search-filter">
+            <div class="search-container">
+              <i data-feather="search" class="search-icon"></i>
+              <input type="text" id="searchInput" class="search-input" placeholder="作品やアーティストを検索">
+            </div>
+            <div class="filter-buttons">
+              <button class="button outline active" id="sortNewest">新しい順</button>
+              <button class="button outline" id="sortOldest">古い順</button>
+            </div>
+          </div>
+          
+          <!-- 作品グリッド -->
+          <div class="artwork-grid" id="artworkGrid">
+            <!-- 作品アイテム -->
+            <!-- <a href="archive-detail.html?id=1" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="りんご">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">りんご</h2>
+                <p class="artwork-artist">アーティスト1</p>
+                <p class="artwork-date">2023-01-15</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=2" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="ごりら">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">ごりら</h2>
+                <p class="artwork-artist">アーティスト2</p>
+                <p class="artwork-date">2023-02-20</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=3" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="らくだ">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">らくだ</h2>
+                <p class="artwork-artist">アーティスト3</p>
+                <p class="artwork-date">2023-03-10</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=4" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="だるま">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">だるま</h2>
+                <p class="artwork-artist">アーティスト4</p>
+                <p class="artwork-date">2023-04-05</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=5" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="まくら">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">まくら</h2>
+                <p class="artwork-artist">アーティスト5</p>
+                <p class="artwork-date">2023-05-18</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=6" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="らっぱ">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">らっぱ</h2>
+                <p class="artwork-artist">アーティスト6</p>
+                <p class="artwork-date">2023-06-22</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=7" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="パンダ">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">パンダ</h2>
+                <p class="artwork-artist">アーティスト7</p>
+                <p class="artwork-date">2023-07-30</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=8" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="だんご">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">だんご</h2>
+                <p class="artwork-artist">アーティスト8</p>
+                <p class="artwork-date">2023-08-14</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=9" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="ごはん">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">ごはん</h2>
+                <p class="artwork-artist">アーティスト9</p>
+                <p class="artwork-date">2023-09-02</p>
+              </div>
+            </a>
+            <a href="archive-detail.html?id=10" class="artwork-item">
+              <div class="artwork-image">
+                <img src="images/placeholder.jpg" alt="んじん">
+              </div>
+              <div class="artwork-info">
+                <h2 class="artwork-title">んじん</h2>
+                <p class="artwork-artist">アーティスト10</p>
+                <p class="artwork-date">2023-10-11</p>
+              </div>
+            </a> -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p class="copyright">
+          &copy; <span id="currentYear"></span> 関数アートしりとりプロジェクト. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+          <a href="credits.html" class="footer-link">クレジット</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/fetch-artworks.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/archive.js"></script>
+</body>
+</html>
+
