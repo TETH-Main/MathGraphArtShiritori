@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>関数アートしりとり</title>
+  <meta name="description" content="関数アートしりとりプロジェクトの公式サイト">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Iconsの読み込み -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">関数アートしりとり</a>
+        
+        <!-- デスクトップナビゲーション -->
+        <nav class="desktop-nav">
+          <a href="index.html" class="nav-link active">トップ</a>
+          <a href="archive.html" class="nav-link">アーカイブ</a>
+          <a href="how-to-join.html" class="nav-link">参加方法</a>
+          <a href="contact.html" class="nav-link">お問い合わせ</a>
+        </nav>
+
+        <!-- モバイルメニューボタン -->
+        <button class="mobile-menu-button" aria-label="メニューを開く">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- モバイルナビゲーション -->
+      <div class="mobile-nav">
+        <div class="container">
+          <nav class="mobile-nav-links">
+            <a href="index.html" class="nav-link">トップ</a>
+            <a href="archive.html" class="nav-link">アーカイブ</a>
+            <a href="how-to-join.html" class="nav-link">参加方法</a>
+            <a href="contact.html" class="nav-link">お問い合わせ</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <!-- ヒーローセクション -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">関数アートしりとり</h1>
+              <p class="hero-description">
+                数式で描かれた美しいアートが、言葉のリレーでつながっていく。
+                関数アートしりとりプロジェクトへようこそ。
+              </p>
+              <div class="hero-buttons">
+                <a href="how-to-join.html" class="button primary">
+                  参加する
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="archive.html" class="button outline">アーカイブを見る</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <a href="https://x.com/CHARTMANq/status/1436647452791037955" target="_blank">
+                <img src="public/ex.png" alt="関数アートしりとりの例" class="rounded">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 現在のバトンセクション -->
+      <section class="section">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card" id="latestArtwork">
+              <!-- 最新バトンの情報 -->
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <h2 class="section-title">バトンを受け取る</h2>
+                <p class="text-muted mb-6">
+                  関数アートしりとりに参加して、あなたの数式アートを披露しませんか？
+                  次のバトンを受け取りたい方は申し込みフォームからご連絡ください。
+                </p>
+                <a href="https://forms.gle/7ca8EyK78PcTATUa9" target="_blank" rel="noopener noreferrer" class="button primary full-width">
+                  申し込みフォームへ
+                  <i data-feather="external-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- しりとりバトンとは？セクション -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">しりとりバトンとは？</h2>
+            <p class="section-description">
+              関数アートしりとりは、数式で描かれたアートをしりとりの要領でつなげていくプロジェクトです。
+            </p>
+          </div>
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-content text-center">
+                <div class="step-icon">
+                  <span>1</span>
+                </div>
+                <h3 class="card-title">単語を受け取る</h3>
+                <p class="text-muted">
+                  前の参加者の作品の単語の最後の文字から始まる新しい単語を考えます。
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content text-center">
+                <div class="step-icon">
+                  <span>2</span>
+                </div>
+                <h3 class="card-title">関数アートを作成</h3>
+                <p class="text-muted">
+                  あなたが選んだ単語をイメージした関数アートを数式で描きます。
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content text-center">
+                <div class="step-icon">
+                  <span>3</span>
+                </div>
+                <h3 class="card-title">バトンを渡す</h3>
+                <p class="text-muted">
+                  作品と単語を公開し、次の参加者にバトンを渡します。<br>
+                  「次に続きたいアーティストから選ぶ」または、「Twitterで自分で探し」つなげてください。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 過去の作品カルーセル -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header-with-action">
+            <h2 class="section-title">過去の作品</h2>
+            <a href="archive.html" class="button outline">
+              すべて見る
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel" id="artCarousel">
+              <!-- カルーセルアイテム -->
+            </div>
+            <button class="carousel-button prev" id="prevButton" aria-label="前へ">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="carousel-button next" id="nextButton" aria-label="次へ">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 次に続きたいアーティストセクション -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">次に続きたいアーティスト</h2>
+          <div class="grid-4" id="application-user">
+            <!-- アーティストリスト -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p class="copyright">
+          &copy; <span id="currentYear"></span> 関数アートしりとりプロジェクト. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+          <a href="credits.html" class="footer-link">クレジット</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/fetch-application.js"></script>
+  <script src="js/application-user.js"></script>
+  <script src="js/fetch-artworks.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>
+
