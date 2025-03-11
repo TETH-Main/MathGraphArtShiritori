@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // 申し込みユーザーにアイテムを追加
     applicationUsers.forEach(user => {
       const participationBool = user.check || '';
-      if (participationBool === '申し込みを取り消します') continue;
+      if (participationBool === '申し込みを取り消します') return;
       const artist = user.account || user.artistName || user.artist || '';
       
       const userItem = document.createElement('div');
