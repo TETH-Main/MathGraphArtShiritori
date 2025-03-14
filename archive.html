@@ -1,96 +1,122 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アーカイブ - 関数アートしりとり</title>
-  <meta name="description" content="関数アートしりとりプロジェクトの作品アーカイブ">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Google Fontsの読み込み -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Feather Iconsの読み込み -->
-  <script src="https://unpkg.com/feather-icons"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connecting Words with Math Graph Art" />
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://teth-main.github.io/MathGraphArtShiritori/public/apple-touch-icon.png" />
+    <link rel="icon" sizes="32x32" href="https://teth-main.github.io/MathGraphArtShiritori/public/icon-32x32.png" />
+    <link rel="icon" sizes="16x16" href="https://teth-main.github.io/MathGraphArtShiritori/public/icon-16x16.png" />
+    <meta property="og:url" content="https://teth-main.github.io/MathGraphArtShiritori/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="関数アートしりとりバトン" />
+    <meta property="og:description" content="数式で描かれた美しいアートが、言葉のリレーでつながっていく。 関数アートしりとりプロジェクトへようこそ。" />
+    <meta property="og:site_name" content="関数アートしりとり" />
+    <meta property="og:image" content="https://teth-main.github.io/MathGraphArtShiritori/public/how-to.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>アーカイブ - 関数アートしりとり</title>
+    <meta name="description" content="関数アートしりとりプロジェクトの公式サイト">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <div class="site-wrapper">
-    <!-- ヘッダー -->
-    <header class="header">
-      <div class="container header-container">
-        <a href="index.html" class="logo">関数アートしりとり</a>
-        
-        <!-- デスクトップナビゲーション -->
-        <nav class="desktop-nav">
-          <a href="index.html" class="nav-link">トップ</a>
-          <a href="archive.html" class="nav-link active">アーカイブ</a>
-          <a href="how-to-join.html" class="nav-link">参加方法</a>
-          <a href="contact.html" class="nav-link">お問い合わせ</a>
-        </nav>
-
-        <!-- モバイルメニューボタン -->
-        <button class="mobile-menu-button" aria-label="メニューを開く">
-          <i data-feather="menu"></i>
-        </button>
-      </div>
-
-      <!-- モバイルナビゲーション -->
-      <div class="mobile-nav">
+    <header>
         <div class="container">
-          <nav class="mobile-nav-links">
-            <a href="index.html" class="nav-link">トップ</a>
-            <a href="archive.html" class="nav-link">アーカイブ</a>
-            <a href="how-to-join.html" class="nav-link">参加方法</a>
-            <a href="contact.html" class="nav-link">お問い合わせ</a>
-          </nav>
+            <div class="logo">
+                <i class="fas fa-function"></i> 関数アートしりとりプロジェクト
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="archive.html" class="active">アーカイブ</a></li>
+                    <li><a href="how-to-join.html">参加方法</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+        <div class="overlay"></div>
     </header>
 
-    <!-- メインコンテンツ -->
-    <main>
-      <section class="section">
+    <section class="page-header">
         <div class="container">
-          <h1 class="page-title">アーカイブ</h1>
-          
-          <!-- 検索とフィルター -->
-          <div class="search-filter">
+            <h1>アーカイブ</h1>
+            <p>関数アートしりとりプロジェクトの過去の作品をご覧いただけます。</p>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
             <div class="search-container">
-              <i data-feather="search" class="search-icon"></i>
-              <input type="text" id="searchInput" class="search-input" placeholder="作品やアーティストを検索">
+                <div class="search-box">
+                    <h3>キーワード検索</h3>
+                    <input type="text" id="keyword-search" class="search-input" placeholder="単語やアーティスト名で検索...">
+                </div>
             </div>
-            <div class="filter-buttons">
-              <button class="button outline active" id="sortNewest">新しい順</button>
-              <button class="button outline" id="sortOldest">古い順</button>
-            </div>
-          </div>
-          
-          <!-- 作品グリッド -->
-          <div class="artwork-grid" id="artworkGrid">
-            <!-- 作品アイテム -->
-          </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- フッター -->
-    <footer class="footer">
-      <div class="container footer-container">
-        <p class="copyright">
-          &copy; <span id="currentYear"></span> 関数アートしりとりプロジェクト. All rights reserved.
-        </p>
-        <div class="footer-links">
-          <a href="https://x.com/TETH_Main" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
-          <a href="credits.html" class="footer-link">クレジット</a>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="sort-select">並び替え</label>
+                    <select id="sort-select" class="filter-input">
+                        <option value="date-desc">投稿日時（新しい順）</option>
+                        <option value="date-asc">投稿日時（古い順）</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="items-per-page">1ページあたりの表示件数</label>
+                    <select id="items-per-page" class="filter-input">
+                        <option value="5">5件</option>
+                        <option value="10" selected>10件</option>
+                        <option value="15">15件</option>
+                        <option value="20">20件</option>
+                    </select>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <section class="archive-container">
+        <div class="container">
+            <div id="loading" class="loading">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+
+            <div id="artwork-list" class="artwork-list">
+                <!-- 作品リストはJavaScriptで動的に生成 -->
+            </div>
+
+            <div class="pagination">
+                <button id="prev-page" disabled>前のページ</button>
+                <div class="page-info">
+                    <span id="current-page">1</span> / <span id="total-pages">1</span>
+                </div>
+                <button id="next-page">次のページ</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 関数アートしりとりプロジェクト</p>
+            <p>数式の美しさと言葉の力で紡ぐアートプロジェクト</p>
+        </div>
     </footer>
-  </div>
 
-  <!-- JavaScript -->
-  <script src="js/fetch-artworks.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/archive.js"></script>
+    <!-- JavaScript files -->
+    <script src="js/models/ArtworkModel.js"></script>
+    <script src="js/utils/DateUtils.js"></script>
+    <script src="js/services/DataService.js"></script>
+    <script src="js/controllers/UIController.js"></script>
+    <script src="js/controllers/SearchController.js"></script>
+    <script src="js/controllers/PaginationController.js"></script>
+    <script src="js/archive.js"></script>
 </body>
-</html>
 
+</html>
