@@ -1,71 +1,47 @@
 /**
  * UI表示と操作を担当するコントローラークラス
  */
-class UIController {
+class UIController extends CommonUIController {
     /**
      * UIControllerのコンストラクタ
      * @param {DataService} dataService - データサービス
      */
     constructor(dataService) {
+        super(); // CommonUIControllerのコンストラクタを呼び出し
         this.dataService = dataService;
-        this.initHamburgerMenu();
-    }
-
-    /**
-     * ハンバーガーメニューの初期化
-     */
-    initHamburgerMenu() {
-        const hamburger = document.querySelector('.hamburger-menu');
-        const nav = document.querySelector('nav ul');
-        const overlay = document.querySelector('.overlay');
-
-        if (hamburger && nav && overlay) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                nav.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.classList.toggle('no-scroll');
-            });
-
-            overlay.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                nav.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.classList.remove('no-scroll');
-            });
-        }
-    }
-
-    /**
-     * よくある質問のアコーディオンを初期化
-     */
-    initFaqAccordion() {
-        const faqQuestions = document.querySelectorAll('.faq-question');
-
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-
-                // アクティブ状態を切り替え
-                question.classList.toggle('active');
-                answer.classList.toggle('active');
-            });
-        });
     }
 
     /**
      * トップページのUIを初期化
      */
     initHomeUI() {
+        // バトン表示のローディング
+        this.showSectionLoading('baton', true);
+
         // 現在のバトンと前回のバトンを表示
-        this.renderCurrentBaton();
-        this.renderPreviousBaton();
+        setTimeout(() => {
+            this.renderCurrentBaton();
+            this.renderPreviousBaton();
+            this.showSectionLoading('baton', false);
+        }, 1500);
+
+        // ギャラリーのローディング
+        this.showSectionLoading('gallery', true);
 
         // 過去の作品を表示
-        this.renderGallery();
+        setTimeout(() => {
+            this.renderGallery();
+            this.showSectionLoading('gallery', false);
+        }, 2000);
+
+        // アーティスト一覧のローディング
+        this.showSectionLoading('artists', true);
 
         // 次に続きたいアーティストを表示
-        this.renderNextArtists();
+        setTimeout(() => {
+            this.renderNextArtists();
+            this.showSectionLoading('artists', false);
+        }, 2500);
     }
 
     /**
@@ -122,7 +98,7 @@ class UIController {
 
                 const avatar = document.createElement('div');
                 avatar.className = 'artist-avatar';
-                avatar.innerHTML = '<i class="fab fa-twitter"></i>';
+                avatar.innerHTML = '<i class="fa-brands fa-x-twitter"></i>';
 
                 const info = document.createElement('div');
                 info.className = 'artist-info';

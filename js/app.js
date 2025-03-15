@@ -16,7 +16,6 @@ class App {
      */
     async init() {
         // データを取得
-        this.showLoading(true);
         const success = await this.dataService.fetchData();
 
         if (success) {
@@ -25,30 +24,6 @@ class App {
         } else {
             // エラーメッセージを表示
             this.showError('データの取得に失敗しました。後でもう一度お試しください。');
-        }
-
-        this.showLoading(false);
-    }
-
-    /**
-     * ローディング表示
-     * @param {boolean} show - 表示するかどうか
-     */
-    showLoading(show) {
-        let loading = document.getElementById('loading');
-
-        if (!loading) {
-            loading = document.createElement('div');
-            loading.id = 'loading';
-            loading.className = 'loading';
-            loading.innerHTML = '<i class="fas fa-spinner"></i>';
-            document.body.appendChild(loading);
-        }
-
-        if (show) {
-            loading.classList.remove('hidden');
-        } else {
-            loading.classList.add('hidden');
         }
     }
 

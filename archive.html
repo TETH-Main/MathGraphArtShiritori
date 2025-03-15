@@ -26,22 +26,64 @@
     <header>
         <div class="container">
             <div class="logo">
-                <i class="fas fa-function"></i> 関数アートしりとりプロジェクト
+                <i class="fa-solid fa-code-compare"></i> 関数アートしりとり
             </div>
             <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <nav>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="archive.html" class="active">アーカイブ</a></li>
-                    <li><a href="how-to-join.html">参加方法</a></li>
+                    <li><a href="index.html" class="nav-link">ホーム</a></li>
+                    <li><a href="archive.html" class="nav-link active">アーカイブ</a></li>
+                    <li><a href="how-to-join.html" class="nav-link">参加方法</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="overlay"></div>
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="logo">
+                        <i class="fa-solid fa-code-compare"></i> 関数アートしりとり
+                    </div>
+                </div>
+
+                <nav class="mobile-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-link" data-page="search">
+                                <span class="menu-icon"><i class="fa-solid fa-house"></i></span>
+                                <span class="menu-text">ホーム</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="archive.html" class="nav-link active" data-page="how-to-use">
+                                <span class="menu-icon"><i class="fa-solid fa-inbox"></i></span>
+                                <span class="menu-text">アーカイブ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="how-to-join.html" class="nav-link" data-page="register">
+                                <span class="menu-icon"><i class="fa-solid fa-right-to-bracket"></i></span>
+                                <span class="menu-text">参加方法</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <p>
+                        &copy; <span id="currentYear"></span> 関数アートしりとりプロジェクト
+                    </p>
+                </div>
+            </div>
+
+            <!-- 背景エフェクト用の要素 -->
+            <div class="menu-background-effect"></div>
+        </div>
     </header>
 
     <section class="page-header">
@@ -105,7 +147,7 @@
     <footer>
         <div class="container">
             <p>© 2025 関数アートしりとりプロジェクト</p>
-            <p>数式の美しさと言葉の力で紡ぐアートプロジェクト</p>
+            <p>数式の美しさと言葉の力で紡ぐプロジェクト</p>
         </div>
     </footer>
 
@@ -113,6 +155,7 @@
     <script src="js/models/ArtworkModel.js"></script>
     <script src="js/utils/DateUtils.js"></script>
     <script src="js/services/DataService.js"></script>
+    <script src="js/controllers/CommonUIController.js"></script>
     <script src="js/controllers/UIController.js"></script>
     <script src="js/controllers/SearchController.js"></script>
     <script src="js/controllers/PaginationController.js"></script>

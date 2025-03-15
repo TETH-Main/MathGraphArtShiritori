@@ -26,22 +26,64 @@
     <header>
         <div class="container">
             <div class="logo">
-                <i class="fas fa-function"></i> 関数アートしりとりプロジェクト
+                <i class="fa-solid fa-code-compare"></i> 関数アートしりとり
             </div>
             <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <nav>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="archive.html">アーカイブ</a></li>
-                    <li><a href="how-to-join.html" class="active">参加方法</a></li>
+                    <li><a href="index.html" class="nav-link">ホーム</a></li>
+                    <li><a href="archive.html" class="nav-link">アーカイブ</a></li>
+                    <li><a href="how-to-join.html" class="nav-link active">参加方法</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="overlay"></div>
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="logo">
+                        <i class="fa-solid fa-code-compare"></i> 関数アートしりとり
+                    </div>
+                </div>
+
+                <nav class="mobile-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-link" data-page="search">
+                                <span class="menu-icon"><i class="fa-solid fa-house"></i></span>
+                                <span class="menu-text">ホーム</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="archive.html" class="nav-link" data-page="how-to-use">
+                                <span class="menu-icon"><i class="fa-solid fa-inbox"></i></span>
+                                <span class="menu-text">アーカイブ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="how-to-join.html" class="nav-link active" data-page="register">
+                                <span class="menu-icon"><i class="fa-solid fa-right-to-bracket"></i></span>
+                                <span class="menu-text">参加方法</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <p>
+                        &copy; <span id="currentYear"></span> 関数アートしりとりプロジェクト
+                    </p>
+                </div>
+            </div>
+
+            <!-- 背景エフェクト用の要素 -->
+            <div class="menu-background-effect"></div>
+        </div>
     </header>
 
     <section class="page-header">
@@ -121,7 +163,7 @@
             <h2>よくある質問</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <div class="faq-question">
                         関数アートの経験がなくても参加できますか？
                         <i class="fas fa-chevron-down"></i>
                     </div>
@@ -129,9 +171,9 @@
                         <p>はい、初心者の方も大歓迎です。簡単な関数から始めることもできますし、<br>チュートリアルや参考資料もご紹介できます。お気軽にお問い合わせください。</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <div class="faq-question">
                         どのようなツールを使えばいいですか？
                         <i class="fas fa-chevron-down"></i>
                     </div>
@@ -139,9 +181,9 @@
                         <p>Desmos、GeoGebra、Mathematicaなど、関数グラフを描画できるツールであれば何でも構いません。<br>無料で使えるオンラインツールもたくさんあります。</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <div class="faq-question">
                         制作期間はどれくらいですか？
                         <i class="fas fa-chevron-down"></i>
                     </div>
@@ -149,9 +191,9 @@
                         <p>バトンを受け取ってから2週間以内の完成を目安としています。<br>ただし、状況に応じて柔軟に対応しますので、遅れそうな場合はご連絡ください。</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <div class="faq-question">
                         作品の著作権はどうなりますか？
                         <i class="fas fa-chevron-down"></i>
                     </div>
@@ -160,14 +202,6 @@
                     </div>
                 </div>
             </div>
-            
-            <script>
-            function toggleFaq(element) {
-                element.classList.toggle('active');
-                const answer = element.nextElementSibling;
-                answer.classList.toggle('active');
-            }
-            </script>
         </div>
     </section>
 
@@ -182,9 +216,13 @@
     <footer>
         <div class="container">
             <p>© 2025 関数アートしりとりプロジェクト</p>
-            <p>数式の美しさと言葉の力で紡ぐアートプロジェクト</p>
+            <p>数式の美しさと言葉の力で紡ぐプロジェクト</p>
         </div>
     </footer>
+    <script src="js/controllers/CommonUIController.js"></script>
+    <script src="js/controllers/HowToJoinController.js"></script>
+    <script src="js/how-to-join.js"></script>
+
 </body>
 
 </html>
